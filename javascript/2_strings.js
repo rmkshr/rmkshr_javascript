@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 //Strings
 
 var brand = "victorinox";

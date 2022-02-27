@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 // Logical operator 
 // && , ||
 // Logical operator allows us to chain two or more comparison operators together. 

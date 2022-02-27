@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 var addition = 2 + 2;
 var subtraction = 2 - 2; 
 var division = 8 / 2; 

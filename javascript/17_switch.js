@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 // Switch Statements. 
 
 // Let us try to convert this function using if statement into switch statement.

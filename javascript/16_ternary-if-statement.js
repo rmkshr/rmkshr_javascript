@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 // Ternary If statements. 
 
 // The applicable conditions to use the ternary if statements are as follows. 

@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 //Objects are a collection of properties. 
 // We can have nested objects in java script.
 

@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 // Loops : Used to execute a peice of code untill a certain condition is met.
 
 var names = [

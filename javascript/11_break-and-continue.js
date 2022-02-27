@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 // Break and Continue 
 
 var psychic = [

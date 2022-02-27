@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 /* Using the "let" keyword instead, to create new variables is a good practice. 
 Let us consider the same example that was used to demonstrate hoisting. 
 */

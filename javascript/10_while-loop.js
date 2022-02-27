@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 // While loop
 
 var legendary = [

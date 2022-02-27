@@ -1,3 +1,6 @@
+/**
+ * @author ramkishore
+ */
 //Just like java, there are many javascript built in functions
 // that makes the life of a programmer much easier. Below are the few examples.
 
