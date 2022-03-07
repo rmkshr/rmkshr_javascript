@@ -1,3 +1,7 @@
+/**
+ * @author ramkishore
+ */
+
 // Enhanced Object Properties.
 // Let us consider a function that gets in two args and return the as an object. 
 const calculator = (brand, price) => ({ 

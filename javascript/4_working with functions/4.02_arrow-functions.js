@@ -1,3 +1,7 @@
+/**
+ * @author ramkishore
+ */
+
 // Arrow functions
 
 // Below is the regular way of defining a function.

@@ -1,3 +1,7 @@
+/**
+ * @author ramkishore
+ */
+
 const person = { 
     firstName : "Quentine",
     age : 55,

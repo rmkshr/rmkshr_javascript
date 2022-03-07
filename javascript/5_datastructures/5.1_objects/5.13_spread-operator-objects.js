@@ -1,3 +1,7 @@
+/**
+ * @author ramkishore
+ */
+
 // Spread operator on Objects.
 
 const person = { 

@@ -1,3 +1,7 @@
+/**
+ * @author ramkishore
+ */
+
 // Objects 
 
 const person = { 
