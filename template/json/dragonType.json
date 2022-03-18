@@ -1,0 +1,10 @@
+{
+  "Dragonite" : {
+    "type" : "Dragon/Flying",
+    "moves" : "Dragon Claw, Rain Dance, Draco Meteor, Thunder"
+  },
+  "Charizard X" : {
+    "type" : "Dragon/Flying",
+    "moves" : "Dragon Dance, Aerial Ace, Seismic Toss, Flamethrower"
+  }
+}
