@@ -3,17 +3,14 @@
  */
 const {MongoClient} = require('mongodb');
 
-async function main(){
+async function insertMany(jsonData){
     const uri = "mongodb://localhost:27017/test?retryWrites=true&w=majority";
     const client = new MongoClient(uri);
 
     try {
-        // Connect to the MongoDB cluster
         await client.connect();
-
-        // Make the appropriate DB calls
-        await  listDatabases(client);
-
+        const result = await client.db("iamlegend").collection("user_seed").insertMany(jsonData);
+        console.log(result);
     } catch (exception) {
         console.error(exception);
     } finally {
@@ -21,11 +18,6 @@ async function main(){
     }
 }
 
-main().catch(console.error);
+insertMany().catch(console.error);
+module.exports = {insertMany};
 
-async function listDatabases(client){
-    databasesList = await client.db().admin().listDatabases();
-
-    console.log("Databases:");
-    databasesList.databases.forEach(db => console.log(` - ${db.name}`));
-}
