@@ -5,6 +5,7 @@
 const awsObject = require("aws-sdk");
 const csvToJsonObject = require("csvtojson");
 const s3Object = new awsObject.S3();
+const utils = require ("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/utils.js");
 
 const getAllValidFileNames = new Promise ((resolve, reject) => {
     const fileNameList = [];
@@ -26,7 +27,7 @@ const getAllValidFileNames = new Promise ((resolve, reject) => {
     });
 });
 
-const readDataFromS3  = function (fileName) {
+const readFileDataFromS3  = function (fileName) {
     return new Promise ((resolve, reject) => {
         const params = {
             Bucket: "my-awsome-bucket",
@@ -38,5 +39,43 @@ const readDataFromS3  = function (fileName) {
     });
 }
 
+const copyS3BucketFile = function (fileName) {
+    return new Promise ((resolve, reject) => {
+        const params = {
+            Bucket: "my-awsome-bucket",
+            CopySource: "/my-awsome-bucket/".concat(fileName),
+            Key: utils.updateFileName(fileName)
+        };
+        s3Object.copyObject(params, function(error, data) {
+            if (error) {
+                console.log(error, error.stack);
+                reject(error);
+            }
+            else {
+                resolve(fileName);
+            }
+        });
 
-module.exports = {readDataFromS3, getAllValidFileNames};
+    });
+}
+
+const deleteS3BucketFile = function (fileName) {
+    return new Promise ((resolve, reject) => {
+        const params ={
+            Bucket: "my-awsome-bucket",
+            Key: fileName
+        }
+        s3Object.deleteObject(params, function(error, data) {
+            if (error) {
+                console.log(error, error.stack);
+                reject(error);
+            }
+            else  {
+              resolve(data);
+            }
+        });
+    });
+}
+
+
+module.exports = {getAllValidFileNames,readFileDataFromS3,copyS3BucketFile,deleteS3BucketFile};

@@ -3,21 +3,22 @@
  */
 const {MongoClient} = require('mongodb');
 
-async function insertMany(jsonData){
-    const uri = "mongodb://localhost:27017/test?retryWrites=true&w=majority";
-    const client = new MongoClient(uri);
+const insertMany = function (jsonData, fileName) {
+    return new Promise((resolve, reject) => {
+        const uri = "mongodb://localhost:27017/test?retryWrites=true&w=majority";
+        const client = new MongoClient(uri);
 
-    try {
-        await client.connect();
-        const result = await client.db("iamlegend").collection("user_seed").insertMany(jsonData);
-        console.log(result);
-    } catch (exception) {
-        console.error(exception);
-    } finally {
-        await client.close();
-    }
+        try {
+            client.connect();
+            const result = client.db("iamlegend").collection("user_seed").insertMany(jsonData);
+            console.log(result);
+            resolve(fileName);
+        } catch (exception) {
+            console.error(exception);
+            reject(exception);
+        }
+    });
 }
 
-insertMany().catch(console.error);
 module.exports = {insertMany};
 
