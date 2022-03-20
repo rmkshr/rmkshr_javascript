@@ -2,6 +2,10 @@
  * @author ramkishore
  */
 const {MongoClient} = require('mongodb');
+const winstonLogger = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/winston-logger.js");
+
+
+const _logger = winstonLogger.logger;
 
 const insertMany = function (jsonData, fileName) {
     return new Promise((resolve, reject) => {

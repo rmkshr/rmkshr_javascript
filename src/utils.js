@@ -3,7 +3,11 @@
  */
 
 function updateFileName(fileName) {
-    return fileName.replace("New", "Done");
+    try {
+        return fileName.replace("New", "Done");
+    } catch (exception) {
+        console.error(exception);
+    }
 }
 
 module.exports = {updateFileName};
