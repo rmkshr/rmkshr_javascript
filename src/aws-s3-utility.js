@@ -40,7 +40,7 @@ const readFileDataFromS3  = function (fileName) {
     return new Promise ((resolve, reject) => {
         try{
             const params = {
-                Bucket: "my-awsome-bucket",
+                Bucket: "s3tosqsbuckettest",
                 Key: fileName
             };
             const dataStream = s3Object.getObject(params).createReadStream();
@@ -62,8 +62,8 @@ const copyS3BucketFile = function (fileName) {
     return new Promise ((resolve, reject) => {
         try {
             const params = {
-                Bucket: "my-awsome-bucket",
-                CopySource: "/my-awsome-bucket/".concat(fileName),
+                Bucket: "s3tosqsbuckettest",
+                CopySource: "/s3tosqsbuckettest/".concat(fileName),
                 Key: utils.updateFileName(fileName)
             };
             s3Object.copyObject(params, function(error, data) {
@@ -86,7 +86,7 @@ const deleteS3BucketFile = function (fileName) {
     return new Promise ((resolve, reject) => {
         try {
             const params ={
-                Bucket: "my-awsome-bucket",
+                Bucket: "s3tosqsbuckettest",
                 Key: fileName
             }
             s3Object.deleteObject(params, function(error, data) {
