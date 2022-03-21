@@ -6,9 +6,6 @@ const awsObject = require("aws-sdk");
 const csvToJsonObject = require("csvtojson");
 const s3Object = new awsObject.S3();
 const utils = require ("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/utils.js");
-const winstonLogger = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/winston-logger.js");
-
-const logger = winstonLogger.logger;
 
 const getAllValidFileNames = new Promise ((resolve, reject) => {
     try {
