@@ -3,11 +3,21 @@
  * @author ramkishore
  */
 
-const winston = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/winston-logger.js");
+const { Consumer } = require('sqs-consumer');
 
+const app = Consumer.create({
+    queueUrl: 'https://sqs.us-east-1.amazonaws.com/418090287981/s3tosqsstacktest-StandardQueue-2T8hyvzfPfMZ',
+    handleMessage: async (message) => {
+        await console.log(message);
+    }
+});
 
-const logger = winston.logger;
+app.on('error', (err) => {
+    console.error(err.message);
+});
 
-logger.info("INFO");
-logger.warn("WARN");
-logger.error("ERROR");
+app.on('processing_error', (err) => {
+    console.error(err.message);
+});
+
+app.start();
