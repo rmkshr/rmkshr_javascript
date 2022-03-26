@@ -13,13 +13,11 @@ const consumerApp = Consumer.create({
     handleMessage: async (message) => {
         const fileName = JSON.parse(message["Body"]).Records[0].s3.object.key;
         console.log(fileName);
-            await awsS3Utility.readFileDataFromS3(fileName).then(jsonData => {
-                utils.updateJsonDataFromFile(jsonData).then(finalJsonData => {
-                    mongoDataHandler.insertMany(finalJsonData).then(result => {
-                        console.log("Created data count : ".concat(result.insertedCount.toString()));
-                    });
-                });
-            }).catch(exception => console.log(exception));
+            awsS3Utility.readFileDataFromS3(fileName)
+                .then(jsonData => {return utils.updateJsonDataFromFile(jsonData)})
+                .then(finalJsonData => {return mongoDataHandler.insertMany(finalJsonData)})
+                .then(result => { console.log("Created data count : ".concat(result.insertedCount.toString()))})
+                .catch(exception => console.log(exception));
     }
 });
 

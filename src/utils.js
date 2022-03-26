@@ -19,7 +19,10 @@ const updateJsonDataFromFile = function (arrayData) {
         arrayData.forEach(data => {
             const  updatedData = {
                 _id : data.Email,
-                ...data,
+                orgEid : data.OrgEId,
+                firstName : data["First Name"],
+                lastName : data["Last name"],
+                email : data.Email,
                 isRegistered : false
             }
             finalDbData.push(updatedData);

@@ -1,10 +1,39 @@
 {
-  "Dragonite" : {
-    "type" : "Dragon/Flying",
-    "moves" : "Dragon Claw, Rain Dance, Draco Meteor, Thunder"
-  },
-  "Charizard X" : {
-    "type" : "Dragon/Flying",
-    "moves" : "Dragon Dance, Aerial Ace, Seismic Toss, Flamethrower"
-  }
+  "Records":[
+    {
+      "eventVersion":"2.1",
+      "eventSource":"aws:s3",
+      "awsRegion":"us-east-1",
+      "eventTime":"2022-03-23T17:20:16.350Z",
+      "eventName":"ObjectCreated:Put",
+      "userIdentity":{
+        "principalId":"AWS:AROAQRWMBLTQNJQTO7G7M:rmadheshwaran@ghx.com"
+      },
+      "requestParameters":{
+        "sourceIPAddress":"103.143.214.226"
+      },
+      "responseElements":{
+        "x-amz-request-id":"25N1R0GRTPCPMS77",
+        "x-amz-id-2":"dtxsjMc/OU2w8WhqKSMKGgmviBqlBBKuVZFmlxk8JfJAZPVSCfXn7BXibSpSi5LlJbGSp1S55uxksTvu3/AMx7iEjYM0nxM5"
+      },
+      "s3":{
+        "s3SchemaVersion":"1.0",
+        "configurationId":"5e1c672a-4f62-4090-ad76-fcde29c95f83",
+        "bucket":{
+          "name":"ghx-safexpress",
+          "ownerIdentity":{
+            "principalId":"A3IWGQS1P19KKN"
+          },
+          "arn":"arn:aws:s3:::ghx-safexpress"
+        },
+        "object":{
+          "key":"Stanford-H-887-SeedUsers.csv",
+          "size":315,
+          "eTag":"12f78ecea38b48d56e573824aca78c37",
+          "versionId":"t6SiSUJJ7XUwkQmThXHoA90LYTn4kOhH",
+          "sequencer":"00623B56D045013EC7"
+        }
+      }
+    }
+  ]
 }
