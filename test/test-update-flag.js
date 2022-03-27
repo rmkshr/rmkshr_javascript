@@ -32,8 +32,6 @@ function updateRegisteredFlag (dbClient, email) {
             console.log(exception);
             reject(exception.message);
         }
-
-
     });
 }
 
