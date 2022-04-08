@@ -1,0 +1,23 @@
+{
+  "name": "rmkshr_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmkshr/rmkshr_javascript.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmkshr/rmkshr_javascript/issues"
+  },
+  "homepage": "https://github.com/rmkshr/rmkshr_javascript#readme"
+}
