@@ -24,4 +24,34 @@ const finalOut = taskOne()
     .then(value => {return taskThree(value)});
 
 
-finalOut.then(value => console.log(value));
+// finalOut.then(value => console.log(value));
+
+function promiseOne () {
+    return new Promise ((resolve, reject) => {
+        resolve("first promise invoked");
+    });
+}
+
+function promiseTwo (dataOne) {
+    return new Promise ((resolve, reject) => {
+        reject(dataOne + "then second promise invoked");
+    });
+}
+
+function promiseThree (dataTwo) {
+    return new Promise ((resolve, reject) => {
+        resolve(dataTwo + "then third promise invoked");
+    });
+}
+
+function promiseFour (dataThree) {
+    return new Promise (resolve => setTimeout(resolve,3000));
+}
+
+function promiseFive (dataFour) {
+    return new Promise ((resolve, reject) => {
+        resolve(dataFour + "then final promise invoked");
+    });
+}
+
+module.exports = {promiseOne, promiseTwo, promiseThree, promiseFour, promiseFive};
