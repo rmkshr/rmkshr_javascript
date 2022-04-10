@@ -10,7 +10,7 @@ const { Consumer } = require('sqs-consumer');
 
 const consumerApp = Consumer.create({
     queueUrl: 'https://sqs.us-east-1.amazonaws.com/418090287981/s3tosqsstacktest-StandardQueue-2T8hyvzfPfMZ',
-    handleMessage: async (message) => {
+    handleMessage: (message) => {
         const fileName = JSON.parse(message["Body"]).Records[0].s3.object.key;
         console.log(fileName);
             awsS3Utility.readFileDataFromS3(fileName)
