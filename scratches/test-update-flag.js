@@ -5,7 +5,7 @@ const {MongoClient} = require('mongodb');
 
 function establishConnection() {
     return new Promise((resolve, reject) => {
-        const uri = "mongodb://localhost:27017/test?retryWrites=true&w=majority";
+        const uri = "mongodb://localhost:27017/scratches?retryWrites=true&w=majority";
         try {
             const client = new MongoClient(uri).connect();
             resolve(client);

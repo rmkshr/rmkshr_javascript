@@ -2,7 +2,7 @@
  * @author ramkishore
  */
 
-const promiseFunctions = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/test/test-promise.js");
+const promiseFunctions = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/scratches/test-promise.js");
 
 
 // const trigger = promiseFunctions.promiseFour()
