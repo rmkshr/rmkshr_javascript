@@ -10,6 +10,7 @@ const {MongoClient} = require('mongodb');
 function establishConnection () {
     return new Promise((resolve, reject) => {
         const uri = "mongodb://localhost:27017/scratches?retryWrites=true&w=majority";
+        // const uri = "mongodb+srv://rmkshr-rsvp:Vihaan2508@vihaan2508.3233q.mongodb.net/test?authSource=admin&replicaSet=atlas-hlfu6m-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
         const client = new MongoClient(uri);
         client.connect();
         resolve(client);
@@ -19,13 +20,21 @@ function establishConnection () {
 const insertMany = async function (client, jsonData) {
     return new Promise((resolve, reject) => {
         try {
-            const result = client.db("iamlegend").collection("latest-model").insertMany(jsonData);
+            const result = client.db("rmkshr").collection("rsvp-users").insertMany(jsonData);
             resolve(result);
         } catch (exception) {
             reject(exception);
         }
     });
 }
+
+function getAllData (client) {
+    return new Promise((resolve, reject) => {
+        const result = client.db("iamlegend").collection("user_seed").find({}).toArray();
+        resolve(result);
+    });
+}
+
 
 const jsonData =[
     {
@@ -54,12 +63,4 @@ const jsonData =[
     }
     ]
 
-
-async function run () {
-    const dbClient = await establishConnection();
-    const result = await insertMany(dbClient, jsonData);
-    console.log(result);
-    setTimeout();
-}
-
-run();
+establishConnection().then(client => {return getAllData(client)}).then(result => console.log(result));
