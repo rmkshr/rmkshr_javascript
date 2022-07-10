@@ -11,16 +11,31 @@ const promiseFunctions = require("/Users/ramkishoremadheshwaran/WebstormProjects
 //     .then(result => {return promiseFunctions.promiseThree(result)})
 //     .then(result => {return promiseFunctions.promiseFive(result)})
 //     .catch(rejects => console.log(rejects));
-
+//
 // trigger.then(result => console.log(result));
 
-async function tryingAwait () {
-    try {
-        await promiseFunctions.promiseFour();
-        promiseFunctions.promiseOne().then(result => console.log(result));
-        await promiseFunctions.promiseTwo("One ");
-    } catch (rejects) {
-        console.log("catch" + rejects);
-    }
-}
-tryingAwait();
+// async function tryingAwait () {
+//     try {
+//         await promiseFunctions.promiseFour();
+//         promiseFunctions.promiseOne().then(result => console.log(result));
+//         await promiseFunctions.promiseTwo("One ");
+//     } catch (rejects) {
+//         console.log("catch" + rejects);
+//     }
+// }
+// tryingAwait();
+
+let userdataList;
+let secondUserData;
+let thirdUserData;
+const output = promiseFunctions.promiseOne().then(firstResult => {
+    userdataList = firstResult;
+    return promiseFunctions.promiseTwo(firstResult)})
+    .then(secondResult => {
+        secondUserData = secondResult;
+        return promiseFunctions.promiseThree(userdataList)})
+    .then(thirdResult => {
+        thirdUserData = thirdResult;
+        return promiseFunctions.promiseFour(secondUserData)
+    });
+output.then(result => console.log(result));

@@ -34,7 +34,7 @@ function promiseOne () {
 
 function promiseTwo (dataOne) {
     return new Promise ((resolve, reject) => {
-        reject(dataOne + "then second promise invoked");
+        resolve(dataOne + "then second promise invoked");
     });
 }
 
@@ -45,7 +45,9 @@ function promiseThree (dataTwo) {
 }
 
 function promiseFour (dataThree) {
-    return new Promise (resolve => setTimeout(resolve,3000));
+    return new Promise ((resolve, reject) => {
+        resolve(dataThree + "then fourth promise invoked");
+    });
 }
 
 function promiseFive (dataFour) {
