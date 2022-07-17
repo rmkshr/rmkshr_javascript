@@ -4,7 +4,7 @@
 
 //Checking the crypto module
 const crypto = require('crypto');
-const algorithmType = 'aes-256-cbc';
+const algorithmType = 'aes-256-gcm';
 const encryptionKey = crypto.randomBytes(32);
 const initializationVector = crypto.randomBytes(16);
 
