@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "download-csv": "^1.1.1",
-    "json2csv": "^5.0.7"
+    "json2csv": "^5.0.7",
+    "mongodb": "^4.8.1",
+    "sqs-consumer": "^5.7.0"
   }
 }

@@ -4,11 +4,10 @@
 
 const awsS3Utility = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/aws-s3-utility.js");
 const mongoDataHandler = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/mongo-data-handler.js");
-const winstonLogger = require("/Users/ramkishoremadheshwaran/WebstormProjects/rmkshr_javascript/src/winston-logger.js");
-
-const logger = winstonLogger.logger;
+const {logger} = getLogger();
 
 const {Consumer} = require('sqs-consumer');
+const {getLogger} = require("../src/winston-logger");
 
 const app = Consumer.create({
     queueUrl: 'https://sqs.us-east-1.amazonaws.com/418090287981/s3tosqsstacktest-StandardQueue-2T8hyvzfPfMZ',
