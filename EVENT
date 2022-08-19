@@ -1,0 +1,75 @@
+{
+  version: '2.0',
+  routeKey: 'ANY /om/vinayaga',
+  rawPath: '/om/vinayaga',
+  rawQueryString: '',
+  headers: {
+    accept: '*/*',
+    'accept-encoding': 'gzip, deflate, br',
+    'content-length': '740',
+    'content-type': 'application/json',
+    host: '7xk1tpbmne.execute-api.us-east-1.amazonaws.com',
+    'postman-token': '8a23b866-0ed7-412e-a8d1-8f31e93ed55b',
+    'user-agent': 'PostmanRuntime/7.29.0',
+    'x-amzn-trace-id': 'Root=1-62ffebf0-7bfd5d03615894124b4c4d44',
+    'x-forwarded-for': '103.143.214.226',
+    'x-forwarded-port': '443',
+    'x-forwarded-proto': 'https'
+  },
+  requestContext: {
+    accountId: '418090287981',
+    apiId: '7xk1tpbmne',
+    domainName: '7xk1tpbmne.execute-api.us-east-1.amazonaws.com',
+    domainPrefix: '7xk1tpbmne',
+    http: {
+      method: 'POST',
+      path: '/om/vinayaga',
+      protocol: 'HTTP/1.1',
+      sourceIp: '103.143.214.226',
+      userAgent: 'PostmanRuntime/7.29.0'
+    },
+    requestId: 'XIHNphT5oAMEVFA=',
+    routeKey: 'ANY /om/vinayaga',
+    stage: '$default',
+    time: '19/Aug/2022:20:00:48 +0000',
+    timeEpoch: 1660939248751
+  },
+  body: '[\n' +
+    '    {\n' +
+    '      "_id": "peter_griffin@gmail.com",\n' +
+    '      "first-name": "Suganya",\n' +
+    '      "last-name": "Kishore",\n' +
+    '      "email": "JnTR_kishore@gmail.com",\n' +
+    '      "events": [\n' +
+    '        {\n' +
+    '          "id": "event_1",\n' +
+    '          "name": "",\n' +
+    '          "location": "",\n' +
+    '          "date": "",\n' +
+    '          "time": "",\n' +
+    '          "type": "",\n' +
+    '          "purpose": ""\n' +
+    '        },\n' +
+    '        {\n' +
+    '          "id": "event_2",\n' +
+    '          "name": "",\n' +
+    '          "location": "",\n' +
+    '          "date": "",\n' +
+    '          "time": "",\n' +
+    '          "type": "",\n' +
+    '          "purpose": ""\n' +
+    '        },\n' +
+    '        {\n' +
+    '          "id": "event_3",\n' +
+    '          "name": "",\n' +
+    '          "location": "",\n' +
+    '          "date": "",\n' +
+    '          "time": "",\n' +
+    '          "type": "",\n' +
+    '          "purpose": ""\n' +
+    '        }\n' +
+    '      ]\n' +
+    '    }\n' +
+    ']',
+  isBase64Encoded: false
+}

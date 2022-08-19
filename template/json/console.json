@@ -1,0 +1,77 @@
+{
+  "statusCode": httpStatusCode,
+  "headers": { "headerName": "headerValue", ... },
+  "body": [
+    {
+      "_id": "JnTR_kishore@gmail.com",
+      "first-name": "Suganya",
+      "last-name": "Kishore",
+      "email": "JnTR_kishore@gmail.com",
+      "events": [
+        {
+          "id": "event_1",
+          "name": "",
+          "location": "",
+          "date": "",
+          "time": "",
+          "type": "",
+          "purpose": ""
+        },
+        {
+          "id": "event_2",
+          "name": "",
+          "location": "",
+          "date": "",
+          "time": "",
+          "type": "",
+          "purpose": ""
+        },
+        {
+          "id": "event_3",
+          "name": "",
+          "location": "",
+          "date": "",
+          "time": "",
+          "type": "",
+          "purpose": ""
+        }
+      ]
+    },
+    {
+      "_id": "hello_kishore@gmail.com",
+      "first-name": "Suganya",
+      "last-name": "Kishore",
+      "email": "hello_kishore@gmail.com",
+      "events": [
+        {
+          "id": "event_1",
+          "name": "",
+          "location": "",
+          "date": "",
+          "time": "",
+          "type": "",
+          "purpose": ""
+        },
+        {
+          "id": "event_2",
+          "name": "",
+          "location": "",
+          "date": "",
+          "time": "",
+          "type": "",
+          "purpose": ""
+        },
+        {
+          "id": "event_3",
+          "name": "",
+          "location": "",
+          "date": "",
+          "time": "",
+          "type": "",
+          "purpose": ""
+        }
+      ]
+    }
+  ],
+  "isBase64Encoded": false
+}

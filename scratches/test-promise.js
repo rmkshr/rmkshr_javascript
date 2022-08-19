@@ -33,7 +33,7 @@ function promiseOne () {
 }
 
 function promiseTwo (dataOne) {
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve) => {
         resolve(dataOne + "then second promise invoked");
     });
 }
@@ -55,5 +55,8 @@ function promiseFive (dataFour) {
         resolve(dataFour + "then final promise invoked");
     });
 }
+
+promiseTwo("RESOLVE ").then(result => console.log(result));
+
 
 module.exports = {promiseOne, promiseTwo, promiseThree, promiseFour, promiseFive};
