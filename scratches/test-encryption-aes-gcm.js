@@ -16,21 +16,19 @@ function encrypt (text, masterKey) {
     return Buffer.concat([salt, iv, tag, encrypted]).toString('base64');
 }
 
-function decrypt (encryptedData, masterkey) {
+function decrypt (encryptedData, masterKey) {
     const bData = Buffer.from(encryptedData, 'base64');
     const salt = bData.slice(0, 64);
     const iv = bData.slice(64, 80);
     const tag = bData.slice(80, 96);
     const text = bData.slice(96);
 
-    const key = _crypto.pbkdf2Sync(masterkey, salt , 2145, 32, 'sha512');
+    const key = _crypto.pbkdf2Sync(masterKey, salt , 2145, 32, 'sha512');
 
     const decipher = _crypto.createDecipheriv('aes-256-gcm', key, iv);
     decipher.setAuthTag(tag);
 
-    const decryptedData = decipher.update(text, 'binary', 'utf8') + decipher.final('utf8');
-
-    return decryptedData;
+    return decipher.update(text, 'binary', 'utf8') + decipher.final('utf8');
 }
 
 module.exports = {encrypt, decrypt};
